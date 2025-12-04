@@ -1,0 +1,18 @@
+{
+    "openaiKey": "your-openai-key-here",
+    "mcpServers": {
+        "proxy-opensearch": {
+            "command": "python",
+            "args": [
+                "-m",
+                "proxy_mcp.server"
+            ],
+            "env": {
+                "INNER_MCP_CMD": "python -m mcp_server_opensearch",
+                "OPENSEARCH_URL": "https://search-dummy-url.us-east-1.es.amazonaws.com",
+                "OPENSEARCH_USERNAME": "dummy_user",
+                "OPENSEARCH_PASSWORD": "dummy_password"
+            }
+        }
+    }
+}
